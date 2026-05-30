@@ -1,6 +1,15 @@
 # 📊 CRM Analytics — MIS Dashboard
-> Tugas UAS Mata Kuliah Business Intelligence A B C 2024  
+> Tugas UAS Mata Kuliah Business Intelligence  
 > Universitas Mulawarman
+
+---
+
+## 👥 Anggota Kelompok
+
+| Nama | NIM |
+|------|-----|
+| Yulius Pune | 2409116110 |
+| Muh Haikal Adis Y | 2409116035 |
 
 ---
 
@@ -10,10 +19,19 @@ Sistem **CRM Analytics** berbasis web yang menampilkan dashboard analisis *custo
 
 ---
 
+## 🔗 Link Terkait
+
+| Sumber | Link |
+|--------|------|
+| 📓 Google Colab (ETL & Analisis) | [Buka Colab](https://colab.research.google.com/drive/1Zw2bbPkeVkBFmWaBPsrKsxf1vHGgpJTr?usp=sharing) |
+| 📄 Laporan PDF | [Laporan_BI_CustomerChurn.pdf](./Laporan_BI_CustomerChurn.pdf) |
+
+---
+
 ## 🚀 Fitur Utama
 
 | Fitur | Keterangan |
-|-------|-----------|
+|-------|-----------| 
 | 🔐 Login & Session | Autentikasi admin dengan session PHP |
 | 📊 Dashboard | KPI cards + charts real-time dari database |
 | 👥 Data Customer | Tabel dengan search, filter, pagination |
@@ -32,7 +50,8 @@ Sistem **CRM Analytics** berbasis web yang menampilkan dashboard analisis *custo
 | Database | MySQL 5.7+ / MariaDB |
 | Frontend | HTML5, CSS3, JavaScript |
 | Charts | Chart.js 4.4 |
-| Font | Space Grotesk + JetBrains Mono |
+| ETL | Python, Pandas, NumPy |
+| Notebook | Jupyter / Google Colab |
 | Server | XAMPP (Apache + MySQL) |
 
 ---
@@ -43,21 +62,22 @@ Sistem **CRM Analytics** berbasis web yang menampilkan dashboard analisis *custo
 crm_mis/
 │
 ├── 📄 index.php          ← Dashboard utama (KPI + Charts + Tabel terbaru)
-├── 📄 login.php           ← Halaman login
-├── 📄 logout.php          ← Handler logout
-├── 📄 customers.php       ← Data customer (search, filter, pagination, hapus)
-├── 📄 tambah.php          ← Form tambah customer baru
-├── 📄 edit.php            ← Form edit customer
-├── 📄 hapus.php           ← Handler redirect hapus
-├── 📄 analytics.php       ← Halaman analisis churn (chart + high-risk)
-├── 📄 koneksi.php         ← Konfigurasi koneksi database
-├── 📄 db_setup.sql        ← Script setup database & tabel
+├── 📄 login.php          ← Halaman login
+├── 📄 logout.php         ← Handler logout
+├── 📄 customers.php      ← Data customer (search, filter, pagination, hapus)
+├── 📄 tambah.php         ← Form tambah customer baru
+├── 📄 edit.php           ← Form edit customer
+├── 📄 hapus.php          ← Handler redirect hapus
+├── 📄 analytics.php      ← Halaman analisis churn (chart + high-risk)
+├── 📄 koneksi.php        ← Konfigurasi koneksi database
+├── 📄 db_setup.sql       ← Script setup database & tabel
+├── 📄 Laporan_BI_CustomerChurn.pdf ← Laporan lengkap
 │
 ├── 📁 assets/
-│   └── style.css          ← Global stylesheet (dark theme)
+│   └── style.css         ← Global stylesheet (dark theme)
 │
 └── 📁 partials/
-    └── sidebar.php        ← Sidebar navigasi (shared component)
+    └── sidebar.php       ← Sidebar navigasi (shared component)
 ```
 
 ---
@@ -75,28 +95,11 @@ C:\xampp\htdocs\crm_mis\
 ```
 
 ### 3. Setup Database
-
-**Opsi A — Import via db_setup.sql:**
 ```bash
 # Buka phpMyAdmin → SQL → jalankan isi db_setup.sql
 # Atau via terminal:
 mysql -u root -p < db_setup.sql
 ```
-
-**Opsi B — Import Dataset CSV lengkap:**
-```sql
--- Setelah membuat tabel via db_setup.sql:
-LOAD DATA INFILE 'C:/path/to/final_customer_churn_csv.xls'
-INTO TABLE customer_churn
-FIELDS TERMINATED BY ','
-LINES TERMINATED BY '\n'
-IGNORE 1 ROWS
-(customerid, age, gender, tenure, usage_frequency, support_calls,
- payment_delay, subscription_type, contract_length, total_spend,
- last_interaction, churn);
-```
-
-> ⚠️ Atau gunakan **phpMyAdmin → Import** untuk file CSV tersebut.
 
 ### 4. Jalankan Aplikasi
 ```
@@ -154,19 +157,6 @@ Password : admin123
 
 ---
 
-## 👤 Informasi Mahasiswa
-
-| | |
-|---|---|
-| **Nama** | [Nama Lengkap] |
-| **NIM** | [NIM] |
-| **Kelas** | Business Intelligence A / B / C |
-| **Dosen** | [Nama Dosen] |
-| **Semester** | Genap 2024/2025 |
-| **Universitas** | Universitas Mulawarman |
-
----
-
 ## 🔒 Keamanan
 
 - Session-based authentication
@@ -177,5 +167,6 @@ Password : admin123
 ---
 
 <div align="center">
-  <strong>Universitas Mulawarman — Business Intelligence A B C 2024</strong>
+  <strong>Universitas Mulawarman — Business Intelligence 2024/2025</strong><br>
+  Yulius Pune (2409116110) · Muh Haikal Adis Y (2409116035)
 </div>
