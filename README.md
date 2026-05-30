@@ -28,6 +28,34 @@ Sistem **CRM Analytics** berbasis web yang menampilkan dashboard analisis *custo
 
 ---
 
+## 🗃️ Dataset
+
+Dataset yang digunakan adalah **Customer Churn Dataset** dengan total **505.207 record**.
+
+| File | Jumlah Record | Keterangan |
+|------|--------------|-----------|
+| `customer_churn_dataset-training-master.csv` | 440.833 | Data training |
+| `customer_churn_dataset-testing-master.csv` | 64.374 | Data testing |
+
+**Kolom dataset:**
+
+| Kolom | Keterangan |
+|-------|-----------|
+| CustomerID | ID unik customer |
+| Age | Usia customer |
+| Gender | Male / Female |
+| Tenure | Lama berlangganan (bulan) |
+| Usage Frequency | Frekuensi penggunaan layanan |
+| Support Calls | Jumlah panggilan ke support |
+| Payment Delay | Keterlambatan pembayaran (hari) |
+| Subscription Type | Basic / Standard / Premium |
+| Contract Length | Monthly / Quarterly / Annual |
+| Total Spend | Total pengeluaran ($) |
+| Last Interaction | Hari sejak interaksi terakhir |
+| Churn | 0 = Aktif, 1 = Churn |
+
+---
+
 ## 🚀 Fitur Utama
 
 | Fitur | Keterangan |
@@ -76,8 +104,12 @@ crm_mis/
 ├── 📁 assets/
 │   └── style.css         ← Global stylesheet (dark theme)
 │
-└── 📁 partials/
-    └── sidebar.php       ← Sidebar navigasi (shared component)
+├── 📁 partials/
+│   └── sidebar.php       ← Sidebar navigasi (shared component)
+│
+└── 📁 dataset/
+    ├── customer_churn_dataset-training-master.csv  ← Data training (440.833 record)
+    └── customer_churn_dataset-testing-master.csv   ← Data testing (64.374 record)
 ```
 
 ---
